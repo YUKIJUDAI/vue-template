@@ -4,28 +4,15 @@
     </div>
 </template>
 
-<script>
-export default {
-    name: "HelloWorld1",
-    props: {
-        msg: String
-    }
-};
+<script lang="ts">
+import { Component, Vue, Prop } from "vue-property-decorator";
+
+@Component({})
+export default class HelloWorld extends Vue {
+    @Prop() 
+    private msg: string;
+}
 </script>
 
 <style scoped lang="less">
-h3 {
-    margin: 40px 0 0;
-}
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-li {
-    display: inline-block;
-    margin: 0 10px;
-}
-a {
-    color: #42b983;
-}
 </style>
